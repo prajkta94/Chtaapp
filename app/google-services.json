@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "125687521509",
+    "project_id": "chatappplication-2737b",
+    "storage_bucket": "chatappplication-2737b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:125687521509:android:6aef0ccc573dbfa0c3f40c",
+        "android_client_info": {
+          "package_name": "com.paymentz.chtaapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "125687521509-0n7khg5kcgot13c8n32rcn0jl1u8092l.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.paymentz.chtaapp",
+            "certificate_hash": "e641b6acc839621ccec82402b7f68f82dc014ca1"
+          }
+        },
+        {
+          "client_id": "125687521509-hk2r4qnag6ifo19e611gujeip5v9p3q0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC9JS19zaxxsYzwj4iwgy9ufgrqTTFCXRY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "125687521509-hk2r4qnag6ifo19e611gujeip5v9p3q0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
