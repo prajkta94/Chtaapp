@@ -46,5 +46,12 @@ public class SignInActivity extends AppCompatActivity {
                 .addOnFailureListener(exception ->{
                     Toast.makeText(SignInActivity.this, exception.getLocalizedMessage(), Toast.LENGTH_SHORT).show();
                 });
+
+
+
+    }
+
+    private void show_Message(){
+
     }
 }
