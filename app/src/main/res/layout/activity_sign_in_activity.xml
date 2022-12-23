@@ -62,14 +62,18 @@
             android:paddingEnd="@dimen/_16sdp"
             android:textSize="@dimen/_13sdp"
             />
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/_16sdp">
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btn_signIn"
             android:layout_width="match_parent"
             android:layout_height="@dimen/_50sdp"
-            android:layout_marginTop="@dimen/_30sdp"
             android:text="SignIN"
             />
+        </FrameLayout>
 
         <TextView
             android:id="@+id/textCreateNewAccount"

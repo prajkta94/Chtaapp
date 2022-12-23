@@ -22,7 +22,7 @@ public class SignInActivity extends AppCompatActivity {
 
         setListener();
         binding.btnSignIn.setOnClickListener(view -> {
-            addDataFireStoarge();
+//            addDataFireStoarge();
         });
 
     }
@@ -32,26 +32,37 @@ public class SignInActivity extends AppCompatActivity {
                 startActivity(new Intent(getApplicationContext(),SignUp.class)));
     }
 
-    private  void addDataFireStoarge(){
-        FirebaseFirestore firebaseFirestore = FirebaseFirestore.getInstance();
-        HashMap<String,Object> data = new HashMap<>();
-        data.put("first_name","Chirag");
-        data.put("last_name","Janvalkar");
-        firebaseFirestore.collection("users")
-                .add(data)
-                .addOnSuccessListener(documentReference -> {
-                    Toast.makeText(SignInActivity.this, "Data Inserted", Toast.LENGTH_SHORT).show();
+//    private  void addDataFireStoarge(){
+//        FirebaseFirestore firebaseFirestore = FirebaseFirestore.getInstance();
+//        HashMap<String,Object> data = new HashMap<>();
+//        data.put("first_name","Chirag");
+//        data.put("last_name","Janvalkar");
+//        firebaseFirestore.collection("users")
+//                .add(data)
+//                .addOnSuccessListener(documentReference -> {
+//                    Toast.makeText(SignInActivity.this, "Data Inserted", Toast.LENGTH_SHORT).show();
+//
+//                })
+//                .addOnFailureListener(exception ->{
+//                    Toast.makeText(SignInActivity.this, exception.getLocalizedMessage(), Toast.LENGTH_SHORT).show();
+//                });
+//
+//
+//
+//    }
 
-                })
-                .addOnFailureListener(exception ->{
-                    Toast.makeText(SignInActivity.this, exception.getLocalizedMessage(), Toast.LENGTH_SHORT).show();
-                });
+    private void show_Message(String message){
 
+        Toast.makeText(SignInActivity.this, message, Toast.LENGTH_SHORT).show();
+    }
 
+    private void signIn_Method(){
+        binding.textCreateNewAccount.setOnClickListener(view -> {
+
+        });
+        binding.edtEmail.getText().toString();
+        binding.edtPassword.getText().toString();
 
     }
 
-    private void show_Message(){
-
-    }
 }
