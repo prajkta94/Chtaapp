@@ -16,17 +16,14 @@ import android.view.View;
 import android.widget.Toast;
 
 import com.google.firebase.firestore.FirebaseFirestore;
-import com.paymentz.chtaapp.R;
-import com.paymentz.chtaapp.Utilies.Constant;
+import com.paymentz.chtaapp.Utilies.Constants;
 import com.paymentz.chtaapp.Utilies.PreferenceManger;
 import com.paymentz.chtaapp.databinding.ActivitySignUpBinding;
 
-import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.FileNotFoundException;
 import java.io.InputStream;
 import java.util.HashMap;
-import java.util.regex.Pattern;
 
 public class SignUp extends AppCompatActivity {
     private ActivitySignUpBinding binding;
@@ -73,18 +70,18 @@ public class SignUp extends AppCompatActivity {
         loading(true);
         FirebaseFirestore databaseUser = FirebaseFirestore.getInstance();
         HashMap<String,Object> user = new HashMap<>();
-        user.put(Constant.KEY_NAME,binding.edtName.getText().toString());
-        user.put(Constant.KEY_EMAIL,binding.edtEmail.getText().toString());
-        user.put(Constant.KEY_IMAGE,encodeImage);
+        user.put(Constants.KEY_NAME,binding.edtName.getText().toString());
+        user.put(Constants.KEY_EMAIL,binding.edtEmail.getText().toString());
+        user.put(Constants.KEY_IMAGE,encodeImage);
         databaseUser.collection
-        (Constant.KEY_COLLECTION_USERS).add(user).
+        (Constants.KEY_COLLECTION_USERS).add(user).
                 addOnSuccessListener(documentReference -> {
                     loading(false);
 
-                    preferenceManger.putBoolean(Constant.KEY_SIGNED_IN,true);
-                    preferenceManger.putString(Constant.KEY_USER_ID,documentReference.getId());
-                    preferenceManger.putString(Constant.KEY_NAME,binding.edtName.getText().toString());
-                    preferenceManger.putString(Constant.KEY_IMAGE,encodeImage);
+                    preferenceManger.putBoolean(Constants.KEY_SIGNED_IN,true);
+                    preferenceManger.putString(Constants.KEY_USER_ID,documentReference.getId());
+                    preferenceManger.putString(Constants.KEY_NAME,binding.edtName.getText().toString());
+                    preferenceManger.putString(Constants.KEY_IMAGE,encodeImage);
                     Intent intent= new Intent(getApplicationContext(),MainActivity.class);
                     intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
                     startActivity(intent);

@@ -1,6 +1,6 @@
 package com.paymentz.chtaapp.Utilies;
 
-public class Constant {
+public class Constants {
     public static final String KEY_COLLECTION_USERS="users";
     public static final String KEY_NAME="name";
 
